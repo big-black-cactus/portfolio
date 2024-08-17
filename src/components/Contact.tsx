@@ -47,7 +47,7 @@ export const Contact = ({ id }: { id: string }) => {
         animate={isSectionInView ? "visible" : "hidden"}
         transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
       >
-        Let's talk about the next big thing.
+        Let&aposs talk about the next big thing.
       </motion.div>
 
       <motion.div
