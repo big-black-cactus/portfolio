@@ -26,10 +26,11 @@ export const About = ({ id }: { id: string }) => {
                 About Me.
             </div>
             <TextGenerateEffect
-                words={
-                    // "I'm Artyom, a Full Stack Web Developer and UX/UI Designer with expertise in Next.js. Based in Germany, I craft seamless digital experiences and innovative web applications. I've worked on various projects and startups, excelling both independently and in teams. My strong technical skills and passion for user-centric design bring visionary ideas to life."
-                    "Hi, I&aposm Artyom. As a Full Stack Web Developer and UX/UI Designer based in Germany, I specialize in creating seamless digital experiences using Next.js. I&aposm passionate about bringing innovative web applications to life, focusing on user-centric design. I&aposve worked on various projects and startups, excelling both independently and in teams. Whether working on a startup or a larger project, I am committed to crafting solutions that resonate with users."
-                }
+                // words={
+                //     // "I'm Artyom, a Full Stack Web Developer and UX/UI Designer with expertise in Next.js. Based in Germany, I craft seamless digital experiences and innovative web applications. I've worked on various projects and startups, excelling both independently and in teams. My strong technical skills and passion for user-centric design bring visionary ideas to life."
+                //     "Hi, I&apos;m Artyom. As a Full Stack Web Developer and UX/UI Designer based in Germany, I specialize in creating seamless digital experiences using Next.js. I&apos;m passionate about bringing innovative web applications to life, focusing on user-centric design. I&apos;ve worked on various projects and startups, excelling both independently and in teams. Whether working on a startup or a larger project, I am committed to crafting solutions that resonate with users."
+
+                // }
                 className="text-left"
             />
         </motion.div>

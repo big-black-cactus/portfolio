@@ -4,15 +4,15 @@ import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export const TextGenerateEffect = ({
-  words,
   className,
 }: {
-  words: string;
   className?: string;
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.2 });
   const [scope, animate] = useAnimate();
+
+  const words = "Hi, I'm Artyom. As a Full Stack Web Developer and UX/UI Designer based in Germany, I specialize in creating seamless digital experiences using Next.js. I'm passionate about bringing innovative web applications to life, focusing on user-centric design. I've worked on various projects and startups, excelling both independently and in teams. Whether working on a startup or a larger project, I am committed to crafting solutions that resonate with users.";
 
   let wordsArray = words.split(" ");
 
