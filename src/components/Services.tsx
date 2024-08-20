@@ -19,6 +19,7 @@ export const Services = ({ id }: { id: string }) => {
 
     return (
         <motion.div
+            id={id}
             ref={sectionRef}
             className="min-h-screen bg-black flex flex-col lg:flex-row items-start px-7 sm:px-14 py-20"
             variants={sectionVariants}

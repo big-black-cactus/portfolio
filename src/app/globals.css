@@ -71,3 +71,7 @@
 ::selection {
   background: #252525;
 }
+
+html {
+  scroll-behavior: smooth;
+}

@@ -21,6 +21,7 @@ export const Hero = ({ id }: { id: string }) => {
 
   return (
     <motion.div
+      id={id}
       ref={sectionRef}
       className="h-screen w-full rounded-md bg-black relative flex flex-col items-center justify-center antialiased"
         //   bg-dot-white/[0.15]

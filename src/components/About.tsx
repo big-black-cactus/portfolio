@@ -15,6 +15,7 @@ export const About = ({ id }: { id: string }) => {
 
     return (
         <motion.div
+            id={id}
             ref={ref}
             className="h-screen bg-black my-auto pointer-events-none leading-loose flex flex-col items-start justify-center px-7 sm:px-14"
             variants={variants} // Apply animation variants

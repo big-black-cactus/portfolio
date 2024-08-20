@@ -26,6 +26,7 @@ export const Projects = ({ id }: { id: string }) => {
 
     return (
         <motion.div
+            id={id}
             ref={sectionRef}
             className="min-h-screen bg-black flex flex-col items-start justify-center px-7 sm:px-14 py-20"
             variants={sectionVariants}

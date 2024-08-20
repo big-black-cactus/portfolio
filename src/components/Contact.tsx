@@ -32,6 +32,7 @@ export const Contact = ({ id }: { id: string }) => {
 
   return (
     <motion.div
+      id={id}
       ref={sectionRef}
       className="h-screen bg-black my-auto leading-loose flex flex-col items-center justify-center px-7 sm:px-14"
       variants={sectionVariants}
@@ -65,7 +66,7 @@ export const Contact = ({ id }: { id: string }) => {
       </motion.div>
 
       <motion.div
-        className="absolute bottom-0 w-full text-center text-sm pb-10 font-black mx-auto"
+        className="absolute bottom-0 w-full text-center text-sm pb-4 font-black mx-auto"
         variants={textVariants}
         initial="hidden"
         animate={isSectionInView ? "visible" : "hidden"}

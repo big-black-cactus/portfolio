@@ -22,15 +22,30 @@ export const Navbar = () => {
           className="rounded-full shadow-lg"
         />
         <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-10 text-base ">
-          <Link href="#hero" className="text-gray-500 cursor-hidden">
-            Home
-          </Link>
-          <Link href="#projects" className="text-gray-500 cursor-hidden">
-            Work
-          </Link>
-          <Link href="#services" className="text-gray-500 cursor-hidden">
-            Service
-          </Link>
+          <motion.div
+            whileHover={{ scale: 1.1, color: "#ffffff" }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <Link href="#hero" className="text-gray-500 cursor-hidden" scroll={false}>
+              Home
+            </Link>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.1, color: "#ffffff" }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <Link href="#projects" className="text-gray-500 cursor-hidden" scroll={false}>
+              Projects
+            </Link>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.1, color: "#ffffff" }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <Link href="#services" className="text-gray-500 cursor-hidden" scroll={false}>
+              Services
+            </Link>
+          </motion.div>
         </div>
         <div className="flex items-center space-x-6 ml-auto">
           <Image
