@@ -72,6 +72,8 @@
   background: #252525;
 }
 
-html {
-  scroll-behavior: smooth;
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
 }

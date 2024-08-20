@@ -27,7 +27,7 @@ export const Services = ({ id }: { id: string }) => {
             animate={isSectionInView ? "visible" : "hidden"}
             transition={{ duration: 1.5, ease: "easeInOut" }}
         >
-            <div className="text-2xl md:text-3xl pb-3 font-black text-left mb-24">
+            <div className="text-2xl md:text-3xl pb-3 font-black text-left mb-10 lg:mb-24">
                 Services.
             </div>
             <div className="flex flex-col">

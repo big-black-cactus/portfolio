@@ -52,10 +52,10 @@ export const Contact = ({ id }: { id: string }) => {
       </motion.div>
 
       <motion.div
-        className="text-2xl lg:text-3xl pb-3 font-black mx-auto underline text-gray-500 cursor-pointer
+        className="text-xl sm:text-2xl lg:text-3xl pb-3 font-black mx-auto underline text-gray-500 cursor-pointer
           transition-all duration-500
           hover:bg-gradient-to-r hover:from-purple-400 hover:to-pink-600 hover:text-transparent hover:bg-clip-text
-          select-none"
+          select-none break-all text-center"
         variants={textVariants}
         initial="hidden"
         animate={isSectionInView ? "visible" : "hidden"}
@@ -66,7 +66,7 @@ export const Contact = ({ id }: { id: string }) => {
       </motion.div>
 
       <motion.div
-        className="absolute bottom-0 w-full text-center text-sm pb-4 font-black mx-auto"
+        className="absolute bottom-0 w-full text-center text-xs lg:text-sm pb-6 font-black mx-auto"
         variants={textVariants}
         initial="hidden"
         animate={isSectionInView ? "visible" : "hidden"}

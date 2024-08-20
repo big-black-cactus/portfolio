@@ -34,7 +34,7 @@ export const Projects = ({ id }: { id: string }) => {
             animate={sectionInView ? "visible" : "hidden"}
             transition={{ duration: 2, ease: "easeInOut" }}
         >
-            <div className="text-2xl lg:text-3xl pb-3 font-black text-left mb-24">
+            <div className="text-2xl lg:text-3xl pb-3 font-black text-left mb-10 lg:mb-24">
                 My Projects.
             </div>
 

@@ -26,7 +26,7 @@ export const Navbar = () => {
             whileHover={{ scale: 1.1, color: "#ffffff" }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <Link href="#hero" className="text-gray-500 cursor-hidden" scroll={false}>
+            <Link href="#hero" className="text-gray-500 cursor-hidden hover:text-white/70 transition-opacity duration-1000" scroll={false}>
               Home
             </Link>
           </motion.div>
@@ -34,7 +34,7 @@ export const Navbar = () => {
             whileHover={{ scale: 1.1, color: "#ffffff" }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <Link href="#projects" className="text-gray-500 cursor-hidden" scroll={false}>
+            <Link href="#projects" className="text-gray-500 cursor-hidden hover:text-white/70 transition-opacity duration-1000" scroll={false}>
               Projects
             </Link>
           </motion.div>
@@ -42,7 +42,7 @@ export const Navbar = () => {
             whileHover={{ scale: 1.1, color: "#ffffff" }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <Link href="#services" className="text-gray-500 cursor-hidden" scroll={false}>
+            <Link href="#services" className="text-gray-500 cursor-hidden hover:text-white/70 transition-opacity duration-1000" scroll={false}>
               Services
             </Link>
           </motion.div>

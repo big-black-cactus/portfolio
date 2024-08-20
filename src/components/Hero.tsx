@@ -23,7 +23,7 @@ export const Hero = ({ id }: { id: string }) => {
     <motion.div
       id={id}
       ref={sectionRef}
-      className="h-screen w-full rounded-md bg-black relative flex flex-col items-center justify-center antialiased"
+      className="h-[100vh] w-full rounded-md bg-black relative flex flex-col items-center justify-center antialiased"
         //   bg-dot-white/[0.15]
       variants={variants}
       initial="hidden"
@@ -44,18 +44,6 @@ export const Hero = ({ id }: { id: string }) => {
           </p>
         </motion.div>
 
-        {/* <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-          transition={{ duration: 1.5 }}
-        >
-          <p className="mt-3 md:mt-6 max-w-3xl bg-clip-text text-gray-500 font-medium pointer-events-none text-base md:text-base lg:text-lg">
-            I create intuitive design for websites and apps, helping businesses
-            enhance user experience, boost key metrics and achieve digital
-            leadership
-          </p>
-
-        </motion.div> */}
       </div>
 
       <div className="w-full flex justify-between items-center bottom-0 pb-8 px-5 sm:px-14 text-white font-semibold">
