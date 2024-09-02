@@ -38,7 +38,7 @@ export const Hero = ({ id }: { id: string }) => {
           transition={{ duration: 4 }}
         >
           {/* <p className="max-w-3xl bg-clip-text text-transparent drop-shadow-2xl font-black bg-gradient-to-b from-white/100 to-white/50 pointer-events-none text-2xl md:text-4xl lg:text-5xl lg:leading-[52px]"> */}
-          <p className="max-w-full uppercase text-start bg-clip-text text-transparent drop-shadow-2xl font-black bg-gradient-to-b from-white/100 to-white/50 pointer-events-none text-4xl md:text-5xl lg:text-6xl leading-[42px] md:leading-[54px] lg:leading-[68px]">
+          <p className="max-w-full uppercase text-start bg-clip-text text-transparent drop-shadow-2xl font-[1000] bg-gradient-to-b from-white/100 to-white/50 pointer-events-none text-5xl lg:text-6xl leading-[42px] md:leading-[54px] lg:leading-[68px]">
             Transforming visionary ideas into tangible, high-performing digital products that lead the market.
             
           </p>

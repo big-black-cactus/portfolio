@@ -1,4 +1,3 @@
-"use client"
 "use client";
 
 import { useEffect } from "react";
@@ -8,6 +7,9 @@ import { About } from "@/components/About";
 import { Projects } from "@/components/Projects";
 import { Services } from "@/components/Services";
 import { Contact } from "@/components/Contact";
+import Lenis from "@/components/SmoothScroll";
+
+
 
 export default function Home() {
   useEffect(() => {
@@ -43,17 +45,19 @@ export default function Home() {
   }, []);
 
   return (
-    <main 
-      className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden" 
-    >
-      <div className="w-full">
-        <Navbar />
-        <Hero id="hero" />
-        <About id="about" />
-        <Projects id="projects" />
-        <Services id="services" />
-        <Contact id="contact" />
-      </div>
-    </main>
+    <Lenis>
+      <main 
+        className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden" 
+      >
+        <div className="w-full ">
+          <Navbar />
+          <Hero id="home" />
+          <About id="about" />
+          <Projects id="projects" />
+          <Services id="services" />
+          <Contact id="contact" />
+        </div>
+      </main>
+    </Lenis>
   );
 }

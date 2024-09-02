@@ -6,7 +6,7 @@ import { TextEffect } from './ui/text-effect';
 
 const variants = {
   hidden: { opacity: 0, y: 20 },  // Start fully hidden
-  visible: { opacity: 1, y: 0 }, // Animate to fully visible
+  visible: { opacity: 1, y: 0 },  // Animate to fully visible
 };
 
 export const About = ({ id }: { id: string }) => {
@@ -17,7 +17,7 @@ export const About = ({ id }: { id: string }) => {
     <motion.div
       id={id}
       ref={ref}
-      className="h-screen bg-black my-auto pointer-events-none leading-loose flex flex-col items-start justify-center px-7 sm:px-14"
+      className="h-[100vh] bg-black my-auto pointer-events-none leading-loose flex flex-col items-start justify-center px-7 sm:px-14"
       variants={variants} // Apply animation variants
       initial="hidden"    // Initial hidden state
       animate={isInView ? "visible" : "hidden"} // Animate based on inView
@@ -27,26 +27,29 @@ export const About = ({ id }: { id: string }) => {
         About Me.
       </div>
 
-      <TextEffect 
-        per='char' 
-        preset='blur' 
-        className={`mt-4 text-xl lg:text-2xl font-semibold tracking-wide ${
-          isInView ? 'text-white/30' : 'text-white/0'
-        }`}
-        variants={{
-          container: {
-            hidden: { opacity: 0 },
-            visible: { opacity: 1, transition: { staggerChildren: 0.03 } }
-          },
-          item: {
-            hidden: { opacity: 0, filter: 'blur(12px)' },
-            visible: { opacity: 1, filter: 'blur(0px)' },
-          }
-        }}
-        as="p"
-      >
-        Hi, I&apos;m Artyom. As a Full Stack Web Developer and UX/UI Designer based in Germany, I specialize in creating seamless digital experiences using Next.js. I&apos;m passionate about bringing innovative web applications to life, focusing on user-centric design. I&apos;ve worked on various projects and startups, excelling both independently and in teams. Whether working on a startup or a larger project, I am committed to crafting solutions that resonate with users.
-      </TextEffect>
+      {isInView && (
+        <TextEffect 
+          per='char' 
+          preset='blur' 
+          className={`mt-4 text-2xl lg:text-3xl font-semibold tracking-wide leading-normal ${
+            isInView ? 'text-white/30' : 'text-white/0'
+          }`}
+          variants={{
+            container: {
+              hidden: { opacity: 0 },
+              visible: { opacity: 1, transition: { staggerChildren: 0.03 } }
+            },
+            item: {
+              hidden: { opacity: 0, filter: 'blur(12px)' },
+              visible: { opacity: 1, filter: 'blur(0px)' },
+            }
+          }}
+          as="p"
+        >
+          Hi, I&apos;m Artyom. As a Full Stack Web Developer and UX/UI Designer based in Germany, I specialize in creating seamless digital experiences using Next.js. I&apos;m passionate about bringing innovative web applications to life, focusing on user-centric design. I&apos;ve worked on various projects and startups, excelling both independently and in teams. Whether working on a startup or a larger project, I am committed to crafting solutions that resonate with users.
+        </TextEffect>
+      )}
     </motion.div>
   );
 };
+ 

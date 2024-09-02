@@ -28,7 +28,7 @@ export const Projects = ({ id }: { id: string }) => {
         <motion.div
             id={id}
             ref={sectionRef}
-            className="min-h-screen bg-black flex flex-col items-start justify-center px-7 sm:px-14 py-20"
+            className="min-h-[100vh] bg-black flex flex-col items-start justify-center px-7 sm:px-14 py-20"
             variants={sectionVariants}
             initial="hidden"
             animate={sectionInView ? "visible" : "hidden"}
@@ -50,6 +50,7 @@ export const Projects = ({ id }: { id: string }) => {
                     name="Sales AI"
                     description="The web application is designed to streamline and automate the lead generation process on LinkedIn. Users can add their products or services to the platform, where a trained bot will assist in crafting personalized messages. By simply entering a LinkedIn profile URL, users receive several tailored message variations specifically designed for the targeted individual. This innovative tool not only saves time but also enhances the effectiveness of outreach by leveraging personalized communication strategies."
                     image="/SalesAI.jpg"
+                    projectLink="https://sales-ai-five.vercel.app"
                     shadowColor="#4E1CDB"
                     iconList={["/postgresql.svg", "/nextjs.svg", "/openai.svg", "/postman.svg", "/js.svg"]}
                 />
@@ -67,6 +68,7 @@ export const Projects = ({ id }: { id: string }) => {
                     name="Pilser"
                     description="The web application helps organizations and companies assess physical security, risk management, safety, quality control, and cyber security. Users can leverage premade professional templates, customize existing templates, or create their own to suit specific needs. Beyond assessments, the platform also offers powerful tools for analytics and task management. These features enable users to gain valuable insights from their data, track progress, assign tasks, and ensure that all aspects of their operations are running smoothly and efficiently."
                     image="/Pilser.jpg"
+                    projectLink="https://pilser.com/"
                     pictureOnLeft={true}
                     shadowColor="#1063FF"
                     iconList={["/supabase.svg", "/nextjs.svg", "/prisma.svg", "/pwa.svg", "/typescript.svg"]}

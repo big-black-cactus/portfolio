@@ -34,7 +34,7 @@ export const Contact = ({ id }: { id: string }) => {
     <motion.div
       id={id}
       ref={sectionRef}
-      className="h-screen bg-black my-auto leading-loose flex flex-col items-center justify-center px-7 sm:px-14"
+      className="h-[100vh] bg-black my-auto leading-loose flex flex-col items-center justify-center px-7 sm:px-14"
       variants={sectionVariants}
       initial="hidden"
       animate={isSectionInView ? "visible" : "hidden"}
