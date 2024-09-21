@@ -43,7 +43,7 @@ export const Navbar = () => {
             >
               <Link 
                 href={`#${item.toLowerCase()}`} 
-                className="text-gray-500 cursor-pointer hover:text-white transition-colors duration-1000"
+                className="cursor-none text-gray-500 hover:text-white transition-colors duration-1000"
                 scroll={false}
               >
                 {item}
@@ -74,7 +74,7 @@ export const Navbar = () => {
           />
           <a
             href="mailto:artyomantonenko@gmail.com"
-            className="hidden md:flex z-50 px-0 text-white hover:text-gray-500 text-base font-semibold underline cursor-pointer transition-colors duration-300"
+            className="cursor-none hidden md:flex z-50 px-0 text-white hover:text-gray-500 text-base font-semibold underline transition-colors duration-300"
           >
             Get in Touch
           </a>

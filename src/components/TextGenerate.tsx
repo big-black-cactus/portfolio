@@ -21,7 +21,7 @@ export const TextGenerateEffect = ({
       animate(
         scope.current.children, // Animate each child (word)
         { opacity: 1 },
-        { duration: 1, delay: stagger(0.05) }
+        { duration: 0.6, delay: stagger(0.03) } // Reduced duration and delay for faster animation
       );
     }
   }, [isInView, animate, scope]);
@@ -33,7 +33,7 @@ export const TextGenerateEffect = ({
           <motion.span
             key={word + idx}
             initial={{ opacity: 0 }}
-            className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/30"
+            className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/100 to-white/50"
           >
             {word}{" "}
           </motion.span>

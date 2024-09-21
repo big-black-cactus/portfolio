@@ -9,6 +9,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import BerlinTime from "./BerlinTime";
 import StatusIndicator from "./StatusIndicatior";
+import BlurIn from "./BlurIn";
 
 const variants = {
   hidden: { opacity: 0, y: 0 }, // Start hidden and offset downwards
@@ -28,21 +29,15 @@ export const Hero = ({ id }: { id: string }) => {
       variants={variants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
-      transition={{ duration: 3, ease: "easeInOut" }}
+      transition={{ duration: 3, ease: "anticipate" }}
     >
       {/* <Navbar /> */}
       <div className="h-screen w-screen z-30 flex flex-col items-center justify-center text-white mx-auto px-6 sm:px-14 text-center ">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-          transition={{ duration: 4 }}
-        >
-          {/* <p className="max-w-3xl bg-clip-text text-transparent drop-shadow-2xl font-black bg-gradient-to-b from-white/100 to-white/50 pointer-events-none text-2xl md:text-4xl lg:text-5xl lg:leading-[52px]"> */}
-          <p className="max-w-full uppercase text-start bg-clip-text text-transparent drop-shadow-2xl font-[1000] bg-gradient-to-b from-white/100 to-white/50 pointer-events-none text-5xl lg:text-6xl leading-[42px] md:leading-[54px] lg:leading-[68px]">
-            Transforming visionary ideas into tangible, high-performing digital products that lead the market.
-            
-          </p>
-        </motion.div>
+
+
+        <BlurIn
+          word="Transforming visionary ideas into tangible, high-performing digital products that lead the market."
+        />
 
       </div>
 
@@ -58,7 +53,7 @@ export const Hero = ({ id }: { id: string }) => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             animate={{
-              y: ["0%", "20%", "0%"], // Bounce from initial position to 20% above and back to start
+              y: ["0%", "30%", "0%"], // Bounce from initial position to 20% above and back to start
             }}
             transition={{
               duration: 2, // Duration of the animation

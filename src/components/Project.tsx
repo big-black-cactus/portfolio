@@ -34,17 +34,17 @@ const Project: React.FC<ProjectProps> = ({ name, description, image, tags, proje
       <div className={`w-full md:w-1/3 flex justify-start ${pictureOnLeft ? 'md:order-1' : 'md:order-2'} order-1 relative group`}>
         <motion.div
           ref={divRef}
-          className="relative rounded-lg overflow-hidden w-full h-auto"
+          className="relative rounded-lg overflow-hidden w-full h-auto cursor-none"
           initial={{ opacity: 1 }}
         >
-          <Link href={projectLink}>
+          <Link href={projectLink} className='cursor-none'>
             <Image
               ref={imgRef}  // Assign imgRef to the Image component
               alt={name}
               src={image}
               width={400}
               height={400}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover cursor-none"
               style={{ boxShadow: `0 8px 16px ${shadowColor}` }}
             />
 
@@ -65,7 +65,7 @@ const Project: React.FC<ProjectProps> = ({ name, description, image, tags, proje
       </div>
       <div className={`w-full lg:w-2/3 flex flex-col ${pictureOnLeft ? 'lg:order-2 md:pl-16' : 'lg:order-1 lg:pr-16'} order-2 mt-4 lg:mt-0`}>
         <div className='font-bold text-xl lg:text-2xl mt-4 md:mt-0'>{name}</div>
-        <div className='mt-4 md:mt-8 font-medium text-lg lg:text-xl text-gray-500 leading-7 lg:leading-9'>
+        <div className='mt-4 md:mt-6 font-medium text-lg lg:text-xl text-gray-500 leading-7 lg:leading-9'>
           {description}
         </div>
         <div className='flex flex-row mt-6 space-x-3.5'>

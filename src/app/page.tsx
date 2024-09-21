@@ -8,6 +8,8 @@ import { Projects } from "@/components/Projects";
 import { Services } from "@/components/Services";
 import { Contact } from "@/components/Contact";
 import Lenis from "@/components/SmoothScroll";
+import CustomCursor from "@/components/CustomCursor";
+import { FAQ } from "@/components/FAQ";
 
 
 
@@ -49,12 +51,14 @@ export default function Home() {
       <main 
         className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden" 
       >
-        <div className="w-full ">
+        <div className="w-full cursor-none">
+          <CustomCursor />
           <Navbar />
           <Hero id="home" />
           <About id="about" />
           <Projects id="projects" />
           <Services id="services" />
+          <FAQ id="faq" />
           <Contact id="contact" />
         </div>
       </main>

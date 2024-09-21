@@ -36,7 +36,7 @@ const CustomCursor: React.FC = () => {
 
   return (
     <div
-        className={`z-50 fixed top-0 left-0 size-5 bg-white/50 rounded-full pointer-events-none transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-300 ease-out ${
+        className={`hidden md:flex z-50 fixed top-0 left-0 size-5 bg-white/30 rounded-full pointer-events-none transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-300 ease-out ${
         hovered ? 'scale-150' : 'scale-20'
         }`} // White shadow added
         style={{ top: position.y, left: position.x }}
