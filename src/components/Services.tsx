@@ -118,7 +118,7 @@ export const Services = ({ id }: { id: string }) => {
 
 <div className='grid grid-cols-1 lg:ml-40 lg:grid-cols-2'>
       <AnimatedBackground
-        className='rounded-lg bg-zinc-900/80'
+        className='rounded-lg bg-[#0a0a0a]'
         transition={{
           type: 'spring',
           bounce: 0.2,

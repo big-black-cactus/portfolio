@@ -1,15 +1,10 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import { BackgroundGradientAnimation } from "./BackgroundGradient";
-import { Button } from "./ui/button";
-import { BackgroundBeams } from "./BackgorundBeams";
-import { Navbar } from "./Navbar";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-import BerlinTime from "./BerlinTime";
-import StatusIndicator from "./StatusIndicatior";
-import BlurIn from "./BlurIn";
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
+import BerlinTime from './BerlinTime';
+import StatusIndicator from './StatusIndicatior';
+import BlurIn from './BlurIn';
 
 const variants = {
   hidden: { opacity: 0, y: 0 }, // Start hidden and offset downwards
@@ -24,25 +19,19 @@ export const Hero = ({ id }: { id: string }) => {
     <motion.div
       id={id}
       ref={sectionRef}
-      className="h-[100vh] w-full rounded-md bg-black relative flex flex-col items-center justify-center antialiased"
-        //   bg-dot-white/[0.15]
+      className="h-[100vh] w-full relative z-10 flex flex-col items-center justify-center bg-black"
       variants={variants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       transition={{ duration: 3, ease: "anticipate" }}
     >
-      {/* <Navbar /> */}
-      <div className="h-screen w-screen z-30 flex flex-col items-center justify-center text-white mx-auto px-6 sm:px-14 text-center ">
-
-
+      <div className="h-screen w-screen z-30 flex flex-col items-center justify-center text-white mx-auto px-6 sm:px-14 text-center">
         <BlurIn
           word="Transforming visionary ideas into tangible, high-performing digital products that lead the market."
         />
-
       </div>
 
       <div className="w-full flex justify-between items-center bottom-0 pb-8 px-5 sm:px-14 text-white font-semibold">
-        {/* Scroll Down */}
         <BerlinTime />
         <div className="flex flex-col justify-center items-center text-gray-500 mx-auto">
           Scroll Down
@@ -53,13 +42,13 @@ export const Hero = ({ id }: { id: string }) => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             animate={{
-              y: ["0%", "30%", "0%"], // Bounce from initial position to 20% above and back to start
+              y: ['0%', '30%', '0%'],
             }}
             transition={{
-              duration: 2, // Duration of the animation
-              ease: "easeInOut", // Easing function
-              repeat: Infinity, // Repeat the animation infinitely
-              repeatType: "loop", // Loop the animation
+              duration: 2,
+              ease: 'easeInOut',
+              repeat: Infinity,
+              repeatType: 'loop',
             }}
           >
             <g id="Arrow / Chevron_Down_Duo">
@@ -74,11 +63,8 @@ export const Hero = ({ id }: { id: string }) => {
             </g>
           </motion.svg>
         </div>
-
         <StatusIndicator />
       </div>
-      {/* <Arrow_Right_MD /> */}
-      {/* <BackgroundBeams /> */}
     </motion.div>
   );
 };
