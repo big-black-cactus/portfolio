@@ -87,3 +87,5 @@ export const Navbar = React.memo(() => {
     </motion.nav>
   );
 });
+
+Navbar.displayName = "Navbar"; // Set the display name
