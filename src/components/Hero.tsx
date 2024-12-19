@@ -2,14 +2,17 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import BerlinTime from './BerlinTime';
-import StatusIndicator from './StatusIndicatior';
-import BlurIn from './BlurIn';
 
 const variants = {
   hidden: { opacity: 0, y: 0 }, // Start hidden and offset downwards
   visible: { opacity: 1, y: 0 }, // Animate to visible with no offset
 };
+
+import dynamic from "next/dynamic";
+
+const BerlinTime = dynamic(() => import("./BerlinTime"), { ssr: false });
+const StatusIndicator = dynamic(() => import("./StatusIndicatior"), { ssr: false });
+const BlurIn = dynamic(() => import("./BlurIn"), { ssr: false });
 
 export const Hero = ({ id }: { id: string }) => {
   const sectionRef = useRef(null);

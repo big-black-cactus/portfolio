@@ -3,8 +3,9 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import React from "react";
 
-export const Navbar = () => {
+export const Navbar = React.memo(() => {
   return (
     <motion.nav
       className="w-full fixed top-0 left-0 z-40 bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg text-white py-8"
@@ -19,6 +20,8 @@ export const Navbar = () => {
           width={40}
           height={40}
           className="rounded-full shadow-lg"
+          loading="lazy" // Lazy load the image
+          priority={false}
         />
         <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-10 text-base">
           {['Home', 'Projects', 'Services'].map((item, index) => (
@@ -30,19 +33,19 @@ export const Navbar = () => {
               animate="rest"
               variants={{
                 rest: { scale: 1, rotate: 0, color: "#9CA3AF" }, // Default gray-500 color
-                hover: { 
-                  scale: 1.1, 
-                  rotate: 3, 
-                  color: "#FFFFFF", 
-                  transition: { 
-                    duration: 0.6, 
-                    ease: "easeInOut" 
+                hover: {
+                  scale: 1.1,
+                  rotate: 3,
+                  color: "#FFFFFF",
+                  transition: {
+                    duration: 0.6,
+                    ease: "easeInOut"
                   }
                 },
               }}
             >
-              <Link 
-                href={`#${item.toLowerCase()}`} 
+              <Link
+                href={`#${item.toLowerCase()}`}
                 className="cursor-none text-gray-500 hover:text-white transition-colors duration-1000"
                 scroll={false}
               >
@@ -51,12 +54,12 @@ export const Navbar = () => {
               <motion.div
                 className="absolute bottom-0 left-0 h-0.5 bg-white"
                 variants={{
-                  hover: { 
-                    width: '100%', 
-                    transition: { 
-                      duration: 0.6, 
-                      ease: 'easeInOut' 
-                    } 
+                  hover: {
+                    width: '100%',
+                    transition: {
+                      duration: 0.6,
+                      ease: 'easeInOut'
+                    }
                   },
                   rest: { width: 0 },
                 }}
@@ -71,6 +74,7 @@ export const Navbar = () => {
             width={28}
             height={28}
             className="flex md:hidden cursor-pointer"
+            loading="lazy"
           />
           <a
             href="mailto:artyomantonenko@gmail.com"
@@ -82,4 +86,4 @@ export const Navbar = () => {
       </div>
     </motion.nav>
   );
-};
+});

@@ -44,7 +44,38 @@ const Macan = localFont({
 export const metadata: Metadata = {
   title: "Artyom Antonenko - Full Stack Developer and UX/UI Designer",
   description: "As a Full Stack Web Developer and UX/UI Designer based in Germany, I specialize in creating seamless digital experiences using Next.js. I&apos;m passionate about bringing innovative web applications to life, focusing on user-centric design. I&apos;ve worked on various projects and startups, excelling both independently and in teams. Whether working on a startup or a larger project, I am committed to crafting solutions that resonate with users.",
-  keywords: "Full Stack Developer, UX/UI Designer, Next.js, Web Development, Digital Products, Germany",
+  keywords: [
+    "Full Stack Developer",
+    "UX/UI Designer",
+    "Next.js",
+    "Web Development",
+    "TailwindCSS",
+    "TypeScript",
+    "Digital Products",
+    "Germany",
+    "Portfolio",
+    "Frontend Developer",
+    "React",
+    "SaaS Developer",
+    "Artyom Antonenko",
+  ].join(", "),
+  openGraph: {
+    title: "Artyom Antonenko - Full Stack Developer & UX/UI Designer",
+    description:
+      "Explore the portfolio of Artyom Antonenko, a Full Stack Developer and UX/UI Designer passionate about building seamless digital experiences using Next.js and modern web technologies.",
+    url: "https://yourwebsite.com",
+    siteName: "Artyom Antonenko Portfolio",
+    images: [
+      {
+        url: "/open-graph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Artyom Antonenko - Full Stack Developer and UX/UI Designer",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -68,14 +99,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* <head>
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Artyom Antonenko" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Artyom Antonenko - Full Stack Developer & UX/UI Designer" />
+        <meta
+          property="og:description"
+          content="Explore the portfolio of Artyom Antonenko, a Full Stack Developer and UX/UI Designer passionate about building seamless digital experiences using Next.js and modern web technologies."
+        />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
-      </head> */}
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
