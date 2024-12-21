@@ -5,6 +5,7 @@ import { useRef } from 'react';
 import { useToast } from './ui/use-toast';
 import { Toaster } from './ui/toaster';
 import { useLenis } from '@studio-freight/react-lenis';
+import { ChevronUp } from 'lucide-react';
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 }, // Start hidden and offset downwards
@@ -40,7 +41,7 @@ export const Contact = ({ id }: { id: string }) => {
     }
   };
 
-  
+
   return (
     <motion.div
       id={id}
@@ -53,7 +54,7 @@ export const Contact = ({ id }: { id: string }) => {
     >
       <Toaster />
       <motion.div
-        className="text-5xl lg:text-7xl max-w-3xl pb-12 font-black mx-auto text-center leading-relaxed"
+        className="text-3xl md:text-5xl lg:text-6xl max-w-3xl pb-7 md:pb-12 font-black mx-auto text-center leading-normal"
         variants={textVariants}
         initial="hidden"
         animate={isSectionInView ? 'visible' : 'hidden'}
@@ -63,9 +64,9 @@ export const Contact = ({ id }: { id: string }) => {
       </motion.div>
 
       <motion.div
-        className="text-xl sm:text-2xl lg:text-[34px] pb-3 font-black mx-auto underline text-gray-500
+        className="text-xl sm:text-2xl lg:text-[34px] pb-3 font-black mx-auto underline text-stone-700
           transition-all duration-500
-          hover:bg-gradient-to-r hover:from-purple-400 hover:to-pink-600 hover:text-transparent hover:bg-clip-text
+          hover:text-stone-200
           select-none break-all text-center cursor-none"
         variants={textVariants}
         initial="hidden"
@@ -79,22 +80,22 @@ export const Contact = ({ id }: { id: string }) => {
       {/* Scroll-to-Top Button */}
       <motion.button
         onClick={handleScrollToTop}
-        className="absolute right-14 bottom-14 size-14 items-center justify-center border border-[#222222] bg-[#131313] text-white font-bold rounded-full transform transition-colors duration-300 hover:bg-[#181818] cursor-none shadow-2xl"
+        // className="absolute right-6 md:right-14 bottom-16 md:bottom-14 size-10 sm:size-12 md:size-14 items-center justify-center border border-[#222222] bg-[#131313] text-white font-bold rounded-full transform transition-colors duration-300 hover:bg-[#181818] cursor-none shadow-2xl"
+        className="absolute flex flex-row flex-shrink-0 right-32 md:right-18 bottom-16 md:bottom-14 size-10 sm:size-12 md:size-14 cursor-none hover:text-stone-700 hover:border-stone-700 duration-500 transition-colors"
         variants={textVariants}
         initial="hidden"
         animate={isSectionInView ? 'visible' : 'hidden'}
         transition={{ duration: 1.2, ease: 'easeOut', delay: 0.2 }}
       >
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className='cursor-none mx-auto'>
-          <g id="Arrow / Arrow_Up_SM">
-            <path id="Vector" d="M12 17V7M12 7L8 11M12 7L16 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </g>
-        </svg>
+        <div className='flex flex-row flex-shrink-0 items-center space-x-5 font-semibold text-lg'>
+          <ChevronUp className=' size-7'/>
+          <div>Back Top</div>
+        </div>
       </motion.button>
 
 
       <motion.div
-        className="absolute bottom-0 w-full text-center text-xs lg:text-sm pb-6 font-black mx-auto"
+        className="absolute bottom-0 w-full text-center text-base pb-6 font-black mx-auto"
         variants={textVariants}
         initial="hidden"
         animate={isSectionInView ? 'visible' : 'hidden'}

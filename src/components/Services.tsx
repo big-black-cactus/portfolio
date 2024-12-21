@@ -132,7 +132,7 @@ export const Services = ({ id }: { id: string }) => {
                 <div className="text-2xl md:text-3xl font-medium">
                     {item.title}
                 </div>
-                <div className="text-lg md:text-xl font-medium text-gray-500 pt-4 leading-normal lg:leading-loose">
+                <div className="text-lg md:text-xl font-medium text-stone-600 pt-4 leading-normal lg:leading-loose">
                     {item.description}
                 </div>
             </div>

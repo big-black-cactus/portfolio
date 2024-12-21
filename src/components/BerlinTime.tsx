@@ -16,7 +16,7 @@ const BerlinTime = () => {
 
   return (
       <p className="hidden md:flex text-white font-semibold text-medium">
-        <span className='text-gray-500'>Berlin Time: </span> {time}
+        <span className='text-stone-700 mr-1'>Berlin Time: </span> {time}
     </p>
   );
 };

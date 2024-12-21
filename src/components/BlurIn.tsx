@@ -28,7 +28,8 @@ const BlurIn = ({ word, className, variant, duration = 1.5 }: BlurIntProps) => {
       variants={combinedVariants}
       className={cn(
         className,
-        "font-display max-w-full uppercase text-start bg-clip-text text-transparent drop-shadow-2xl font-[1000] bg-gradient-to-b from-white/100 to-white/50 pointer-events-none text-4xl md:text-5xl lg:text-6xl leading-[46px] md:leading-[54px] lg:leading-[68px] tracking-[-0.02em]",
+        "font-display max-w-full uppercase text-start  drop-shadow-2xl font-[1000] bg-clip-text text-transparent bg-gradient-to-b from-white/100 to-white/50 pointer-events-none text-4xl md:text-5xl lg:text-7xl leading-snug md:leading-[1.7] tracking-[-0.02em]",
+        // "font-display max-w-full uppercase text-start  drop-shadow-2xl font-[1000] bg-clip-text bg-clip-text text-transparent bg-gradient-to-b from-[#63A714] to-[#63A714]/50 pointer-events-none text-4xl md:text-5xl lg:text-7xl leading-[1.7] tracking-[-0.02em]",
       )}
     >
       {word}

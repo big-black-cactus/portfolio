@@ -17,8 +17,8 @@ export const Navbar = React.memo(() => {
         <Image
           alt="Antonenko"
           src="/avatar.jpg"
-          width={40}
-          height={40}
+          width={44}
+          height={44}
           className="rounded-full shadow-lg"
           loading="lazy" // Lazy load the image
           priority={false}
@@ -46,7 +46,7 @@ export const Navbar = React.memo(() => {
             >
               <Link
                 href={`#${item.toLowerCase()}`}
-                className="cursor-none text-gray-500 hover:text-white transition-colors duration-1000"
+                className="cursor-none text-stone-700 hover:text-white transition-colors duration-1000"
                 scroll={false}
               >
                 {item}

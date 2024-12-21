@@ -76,7 +76,7 @@ export const FAQ = ({ id }: { id: string }) => {
       >
         {faqs.map((item, index) => (
             <AccordionItem key={index} value={`item-${index}`} className="py-3">
-            <AccordionTrigger className="w-full py-3 text-2xl text-left text-zinc-50">
+            <AccordionTrigger className="w-full py-5 text-xl md:text-2xl text-left text-zinc-50">
                 <div className="flex items-center">
                 <ChevronRight className="h-7 w-7 transition-transform duration-200 group-data-[expanded]:rotate-90 text-zinc-50" />
                 <div className="ml-2 text-zinc-50">
@@ -85,7 +85,7 @@ export const FAQ = ({ id }: { id: string }) => {
                 </div>
             </AccordionTrigger>
             <AccordionContent className="origin-left">
-                <p className="text-xl text-left pl-10 pr-2 text-zinc-600 leading-7">
+                <p className="text-lg md:text-xl text-left pl-10 pr-2 pb-4 text-zinc-600 leading-7">
                 {item.answer}
                 </p>
             </AccordionContent>

@@ -34,8 +34,8 @@ export const Projects = ({ id }: { id: string }) => {
             animate={sectionInView ? "visible" : "hidden"}
             transition={{ duration: 2, ease: "easeInOut" }}
         >
-            <div className="text-2xl lg:text-3xl pb-3 font-black text-left mb-10 lg:mb-24">
-                My Projects.
+            <div className=" text-2xl lg:text-3xl pb-3 font-black text-left mb-10 lg:mb-24">
+                Projects.
             </div>
 
             <motion.div
@@ -73,6 +73,7 @@ export const Projects = ({ id }: { id: string }) => {
                     shadowColor="#1063FF"
                     iconList={["/supabase.svg", "/nextjs.svg", "/prisma.svg", "/pwa.svg", "/typescript.svg"]}
                 />
+
             </motion.div>
         </motion.div>
     );
