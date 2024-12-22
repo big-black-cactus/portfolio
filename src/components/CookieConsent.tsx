@@ -73,7 +73,7 @@ export default function CookieConsent({
                                 This personal portfolio uses cookies to add a sprinkle of magic to your browsing experience and showcase my work at its best. Your privacy is my priority.
                                 <br />
                                 <br />
-                                <span className="text-xs md:text-[14px]">By clicking "<span className="font-medium opacity-80">Accept</span>", you're allowing the magic to happen.</span>
+                                <span className="text-xs md:text-[14px]">By clicking &quot;<span className="font-medium opacity-80">Accept</span>&quot;, you&apos;re allowing the magic to happen.</span>
                                 <br />
                                 <a href="#" className="text-xs md:text-[14px] underline">Learn more.</a>
                             </p>
