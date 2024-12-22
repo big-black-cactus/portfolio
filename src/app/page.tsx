@@ -9,6 +9,7 @@ import Lenis from "@/components/SmoothScroll";
 import { FAQ } from "@/components/FAQ";
 // import { SmoothScrollHandler } from "@/components/SmoothScrollHandler";
 import dynamic from "next/dynamic";
+import CookieConsent from "@/components/CookieConsent";
 
 
 // Lazy load components for performance
@@ -38,6 +39,7 @@ export default function Home() {
           <Contact id="contact" />
         </div>
       </main>
+      <CookieConsent demo={true}  />
     </Lenis>
   );
 }
