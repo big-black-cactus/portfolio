@@ -25,32 +25,51 @@ export const Services = ({ id }: { id: string }) => {
     const Services = [
         {
           id: 1,
-          title: 'UX/UI Design',
-          description: 'Crafting intuitive and engaging user experiences that enhance the usability and appeal of your digital products. We combine user-centered design principles with creative flair to produce interfaces that are not only beautiful but also functional and easy to navigate.',
+          title: 'Strategy',
+          description:
+            'We help you define clear goals, identify opportunities, and create a smart roadmap to grow your product or brand online.',
         },
         {
           id: 2,
-          title: 'Frontend Development',
-          description: 'Bringing your design to life with clean, efficient code. We specialize in creating responsive, interactive, and user-friendly web interfaces that perform seamlessly across all devices. Using the latest technologies, we ensure your website looks great and functions flawlessly.',
+          title: 'Visual Identity',
+          description:
+            'We craft memorable logos, color palettes, and brand systems that reflect your values and make you stand out.',
         },
         {
           id: 3,
-          title: 'AI Development',
-          description: 'Leveraging cutting-edge machine learning and artificial intelligence technologies to create smart, automated solutions that drive efficiency and innovation. From predictive analytics to natural language processing, we develop AI applications tailored to meet your unique business needs.',
+          title: 'UX/UI Design',
+          description:
+            'We design clean, user-friendly interfaces that are both beautiful and intuitive — focused on real user needs and habits.',
         },
         {
           id: 4,
-          title: 'Full Stack Development',
-          description: 'Offering comprehensive solutions for both frontend and backend development. We build robust, scalable, and secure web applications that cover all aspects of the development process, from database management to server-side logic, ensuring a seamless and integrated digital experience.',
+          title: 'Frontend Development',
+          description:
+            'We build fast, responsive, and pixel-perfect web interfaces using modern tech — ensuring smooth performance across all devices.',
         },
-    ];
+        {
+          id: 5,
+          title: 'AI-Powered Solutions',
+          description:
+            'We integrate smart AI tools into your product — from chatbots to content generators — to boost efficiency and unlock new value.',
+        },
+        {
+          id: 6,
+          title: 'Full Stack Development',
+          description:
+            'We develop end-to-end web apps with clean, scalable architecture — covering everything from UI to backend and database logic.',
+        },
+      ];
+      
 
 
     return (
         <motion.div
             id={id}
             ref={sectionRef}
-            className="min-h-screen bg-black flex flex-col lg:flex-row items-start px-7 sm:px-14 py-20"
+            // className="min-h-screen bg-black flex flex-col lg:flex-row items-start px-7 sm:px-14 pt-20"
+             className="min-h-[85vh] bg-black flex flex-col lg:flex-row items-start px-7 sm:px-14 pt-20"
+            // className=" bg-black flex flex-col lg:flex-row items-start px-7 sm:px-14 pb-36 pt-20"
             variants={sectionVariants}
             initial="hidden"
             animate={isSectionInView ? "visible" : "hidden"}
@@ -118,7 +137,7 @@ export const Services = ({ id }: { id: string }) => {
 
 <div className='grid grid-cols-1 lg:ml-40 lg:grid-cols-2'>
       <AnimatedBackground
-        className='rounded-lg bg-[#0a0a0a]'
+        className='rounded-lg bg-[#0f0f0f]'
         transition={{
           type: 'spring',
           bounce: 0.2,
@@ -128,11 +147,11 @@ export const Services = ({ id }: { id: string }) => {
       >
         {Services.map((item, index) => (
           <div key={index} data-id={`card-${index}`}>
-            <div className='flex select-none flex-col space-y-1 p-4'>
-                <div className="text-2xl md:text-3xl font-medium">
+            <div className='flex select-none flex-col space-y-2 p-5'>
+                <div className="text-2xl md:text-[27px] font-semibold">
                     {item.title}
                 </div>
-                <div className="text-lg md:text-xl font-medium text-stone-600 pt-4 leading-normal lg:leading-loose">
+                <div className="text-lg md:text-lg font-medium text-stone-600 pt-2 leading-normal lg:leading-relaxed">
                     {item.description}
                 </div>
             </div>

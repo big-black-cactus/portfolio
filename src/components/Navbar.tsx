@@ -16,7 +16,7 @@ export const Navbar = React.memo(() => {
       <div className="mx-auto relative flex items-center px-7 sm:px-14">
         <Image
           alt="Antonenko"
-          src="/avatar.jpg"
+          src="/avatar.png"
           width={44}
           height={44}
           className="rounded-full shadow-lg"
@@ -77,10 +77,12 @@ export const Navbar = React.memo(() => {
             loading="lazy"
           />
           <a
-            href="mailto:artyomantonenko@gmail.com"
+            // href="mailto:artyomantonenko@gmail.com"
+            // href="https://calendly.com/artyomantonenko/30min"
+            href="https://cal.com/artyom-antonenko/30min"
             className="cursor-none hidden md:flex z-50 px-0 text-white hover:text-gray-500 text-base font-semibold underline transition-colors duration-300"
           >
-            Get in Touch
+            Book a call
           </a>
         </div>
       </div>
