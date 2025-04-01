@@ -22,7 +22,11 @@ const BlurIn = dynamic(() => import('./BlurIn'), { ssr: false });
 export const Hero = ({ id }: { id: string }) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const controls = useAnimation();
-  const { scrollYProgress } = useScroll();
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+  
 
   useEffect(() => {
     const unsubscribe = scrollYProgress.onChange((value) => {
@@ -47,9 +51,9 @@ export const Hero = ({ id }: { id: string }) => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0 }}
     >
-      <div className="h-screen w-screen z-30 flex flex-col items-start justify-center text-white mx-auto px-6 sm:px-14 text-center pb-4">
+      <div className="h-screen w-screen z-30 flex flex-col items-start justify-center text-white mx-auto px-6 sm:px-14 text-center pb-4 select-none">
         <BlurIn
-          word="Transforming Ambitious Visions into High-Performing Digital Experiences That Make an Impact."
+          word="Turning product ideas into clean, intuitive web apps — designed with care, built to perform."
         />
 
         <div className='w-full flex flex-row mt-10 md:mt-14 justify-between'>

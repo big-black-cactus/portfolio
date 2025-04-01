@@ -16,9 +16,23 @@ interface ProjectProps {
   pictureOnLeft?: boolean;
   shadowColor?: string;
   index: number; // <-- Add this line
+  isUnavailable?: boolean;
 }
 
-const Project: React.FC<ProjectProps> = ({ index, name, description, logo, image, tags, projectLink, iconList = [], pictureOnLeft = false, shadowColor = 'rgba(0, 0, 0, 0.5)' }) => {
+const Project: React.FC<ProjectProps> = ({
+  index,
+  name,
+  description,
+  logo,
+  image,
+  tags,
+  projectLink,
+  iconList = [],
+  pictureOnLeft = false,
+  shadowColor = 'rgba(0, 0, 0, 0.5)',
+  isUnavailable = false,
+}) => {
+
   const divRef = useRef<HTMLDivElement>(null);  // Ref for div
   const imgRef = useRef<HTMLImageElement>(null);  // Ref for Image
   const infoRef = useRef<HTMLDivElement>(null);  // Ref for info div
@@ -42,7 +56,7 @@ const Project: React.FC<ProjectProps> = ({ index, name, description, logo, image
             className="relative rounded-lg overflow-hidden w-full h-auto cursor-none border border-stone-700"
             initial={{ opacity: 1 }}
           >
-            <Link href={projectLink} className='cursor-none' style={{ boxShadow: `0 8px 16px ${shadowColor}` }}>
+            {/* <Link href={projectLink} className='cursor-none' style={{ boxShadow: `0 8px 16px ${shadowColor}` }}>
               <Image
                 ref={imgRef}  // Assign imgRef to the Image component
                 alt={name}
@@ -53,7 +67,7 @@ const Project: React.FC<ProjectProps> = ({ index, name, description, logo, image
                 style={{ boxShadow: `0 8px 16px ${shadowColor}` }}
               />
 
-              {/* Cursor tracker with smooth transition */}
+
               <div
                 ref={infoRef}
                 style={{
@@ -62,11 +76,63 @@ const Project: React.FC<ProjectProps> = ({ index, name, description, logo, image
                 className="flex flex-row items-center pointer-events-none absolute left-0 top-0 z-50 rounded-md bg-black/70 px-4 py-2 text-sm font-bold text-white opacity-0 transition-opacity transform transition-transform ease-out duration-300 group-hover:opacity-100 space-x-1.5 backdrop-blur-sm cursor-none"
               >
                 <span className='font-black text-[15px]'>VIEW PROJECT</span>
-                {/* <Image src="/Arrow_Up_Right_SM.svg" alt="visit-link" width={32} height={32} /> */}
+
                 <ArrowRight className='h-5 w-5 text-white' />
               </div>
 
-            </Link>
+            </Link> */}
+
+            {isUnavailable ? (
+              <div
+                className=""
+                style={{ boxShadow: `0 8px 16px ${shadowColor}` }}
+              >
+                <Image
+                  ref={imgRef}
+                  alt={name}
+                  src={image}
+                  width={1000}
+                  height={1000}
+                  className="w-full h-full object-cover"
+                  style={{ boxShadow: `0 8px 16px ${shadowColor}` }}
+                />
+                <div
+                  ref={infoRef}
+                  style={{
+                    transform: "translate(var(--x), var(--y))",
+                  }}
+                  className="flex flex-row items-center pointer-events-none absolute left-0 top-0 z-50 rounded-md bg-black/70 px-4 py-2 text-sm font-bold text-white opacity-0 transition-opacity transform transition-transform ease-out duration-300 group-hover:opacity-100 space-x-1.5 backdrop-blur-sm"
+                >
+                  <span className="font-black text-[15px] ">IN PROGRESS</span>
+                </div>
+              </div>
+            ) : (
+              <Link
+                href={projectLink}
+                className="cursor-none"
+                style={{ boxShadow: `0 8px 16px ${shadowColor}` }}
+              >
+                <Image
+                  ref={imgRef}
+                  alt={name}
+                  src={image}
+                  width={1000}
+                  height={1000}
+                  className="w-full h-full object-cover cursor-none"
+                  style={{ boxShadow: `0 8px 16px ${shadowColor}` }}
+                />
+                <div
+                  ref={infoRef}
+                  style={{
+                    transform: "translate(var(--x), var(--y))",
+                  }}
+                  className="flex flex-row items-center pointer-events-none absolute left-0 top-0 z-50 rounded-md bg-black/70 px-4 py-2 text-sm font-bold text-white opacity-0 transition-opacity transform transition-transform ease-out duration-300 group-hover:opacity-100 space-x-1.5 backdrop-blur-sm cursor-none"
+                >
+                  <span className="font-black text-[15px]">VIEW PROJECT</span>
+                  <ArrowRight className="h-5 w-5 text-white" />
+                </div>
+              </Link>
+            )}
           </motion.div>
         </div>
         {/* <div className={`w-full lg:w-7/12 flex flex-col ${pictureOnLeft ? 'lg:order-2 md:pl-16' : 'lg:order-1 lg:pr-16'} order-2 mt-4 lg:mt-0`}> */}

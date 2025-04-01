@@ -21,38 +21,47 @@ export const FAQ = ({ id }: { id: string }) => {
 
     const faqs = [
       {
-        question: "Do you offer ongoing support and updates?",
-        answer: "Yes — I offer post-launch support, performance monitoring, and feature updates to ensure your SaaS continues to run smoothly as it grows."
+        "question": "Do you offer ongoing support and updates?",
+        "answer": "Yes — I provide post-launch support, performance monitoring, and feature updates to keep your app running smoothly as it grows."
       },
       {
-        question: "What tech stack do you use for SaaS projects?",
-        answer: "I typically use Next.js, Supabase or PostgreSQL, Prisma, and Stripe — but I’m flexible and can adapt to whatever stack suits your product best."
+        "question": "What tech stack do you use for SaaS projects?",
+        "answer": "My go-to stack includes Next.js, Supabase or PostgreSQL, Prisma, Stripe, and Tailwind — but I'm flexible and can work with your preferred tools."
       },
       {
-        question: "How do you ensure security in a SaaS app?",
-        answer: "Security is a priority. I follow best practices for auth, encryption, and API protection. I can also implement 2FA, audit logging, and GDPR compliance if needed."
+        "question": "How do you ensure security in a SaaS app?",
+        "answer": "Security is baked into the process. I follow best practices for authentication, data encryption, API protection, and can also implement 2FA, audit logging, and GDPR-compliant features."
       },
       {
-        question: "Can you integrate third-party APIs into my SaaS?",
-        answer: "Absolutely — I regularly integrate services like OpenAI, Stripe, Google APIs, and custom CRMs to extend your product's functionality."
+        "question": "Can you integrate third-party APIs into my SaaS?",
+        "answer": "Absolutely. I regularly integrate APIs like OpenAI, Stripe, Google, Clerk, and custom CRMs to extend your product’s functionality."
       },
       {
-        question: "What happens if I need to scale my SaaS quickly?",
-        answer: "I build with scalability in mind. From optimized databases to serverless functions and cloud deployment — your app will be ready to grow fast."
+        "question": "How do you handle communication during the project?",
+        "answer": "I keep things async and transparent. You’ll get regular updates via Slack, Notion, Trello, or email — whatever works best for you."
       },
       {
-        question: "Do you work with existing codebases?",
-        answer: "Yes, I can jump into an existing codebase, audit it, refactor where needed, and start building features or fixing bugs right away."
+        "question": "Can you help me launch and deploy the app?",
+        "answer": "Yes — I handle full deployment on platforms like Vercel, Railway, or custom setups. I’ll help with domains, SSL, CI/CD, and everything needed to go live."
       },
       {
-        question: "How do you handle project communication and updates?",
-        answer: "I keep things transparent and async-friendly. You'll get regular updates via your preferred platform — Slack, Notion, Trello, or simple email check-ins."
+        "question": "What’s your typical development process?",
+        "answer": "I follow a lean, agile workflow — starting with strategy and wireframes, then moving into design, development, and iterative feedback until launch."
       },
       {
-        question: "Can you help me launch and deploy the app?",
-        answer: "Yes — I handle the full deployment pipeline, whether it's Vercel, Railway, or custom infrastructure. I'll also help with domains, SSL, and launch support."
+        "question": "Do you help with MVPs?",
+        "answer": "Definitely. I specialize in building lean MVPs that are fast, functional, and ready to validate your idea with real users."
+      },
+      {
+        "question": "What are your payment terms?",
+        "answer": "Typically, I work with a milestone-based payment structure — starting with a deposit, followed by payments tied to key project phases."
+      },
+      {
+        "question": "Will I own the final product and code?",
+        "answer": "Yes — once the project is complete and paid in full, you’ll have full ownership of the code and all associated assets."
       }
-    ];
+    ]
+    
     
 
     // Split into 2 columns

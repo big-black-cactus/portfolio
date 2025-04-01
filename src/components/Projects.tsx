@@ -79,6 +79,7 @@ export const Projects = ({ id }: { id: string }) => {
                     pictureOnLeft={true}
                     shadowColor="#1063FF"
                     iconList={["/supabase.svg", "/nextjs.svg", "/prisma.svg", "/pwa.svg", "/typescript.svg"]}
+                    isUnavailable={true}
                 />
             </motion.div>
 

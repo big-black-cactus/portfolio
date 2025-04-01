@@ -24,43 +24,45 @@ export const Services = ({ id }: { id: string }) => {
 
     const Services = [
         {
-          id: 1,
-          title: 'Strategy',
-          description:
-            'We help you define clear goals, identify opportunities, and create a smart roadmap to grow your product or brand online.',
+            id: 1,
+            title: 'MVP Development',
+            description:
+                "Need to launch fast? I help you build lean, functional MVPs that prove your concept, attract users, and are ready to grow — without wasting time or budget.",
         },
         {
-          id: 2,
-          title: 'Visual Identity',
-          description:
-            'We craft memorable logos, color palettes, and brand systems that reflect your values and make you stand out.',
+            id: 2,
+            title: 'Product Strategy',
+            description:
+                "Turn rough ideas into a focused product roadmap. Together, we'll define what matters, prioritize features, and plan for scalable success.",
         },
         {
-          id: 3,
-          title: 'UX/UI Design',
-          description:
-            'We design clean, user-friendly interfaces that are both beautiful and intuitive — focused on real user needs and habits.',
+            id: 3,
+            title: 'UX/UI Design',
+            description:
+                "Design that feels right. I create intuitive, conversion-friendly interfaces that match your users' expectations and your business goals.",
         },
         {
-          id: 4,
-          title: 'Frontend Development',
-          description:
-            'We build fast, responsive, and pixel-perfect web interfaces using modern tech — ensuring smooth performance across all devices.',
+            id: 4,
+            title: 'Frontend Development',
+            description:
+                "Fast, responsive UIs built with Next.js, Tailwind, and modern best practices — optimized for performance across all devices.",
         },
         {
-          id: 5,
-          title: 'AI-Powered Solutions',
-          description:
-            'We integrate smart AI tools into your product — from chatbots to content generators — to boost efficiency and unlock new value.',
+            id: 5,
+            title: 'AI-Powered Features',
+            description:
+                "Integrate smart functionality like content generation, chatbots, or AI-based tools to boost engagement and productivity inside your product.",
         },
         {
-          id: 6,
-          title: 'Full Stack Development',
-          description:
-            'We develop end-to-end web apps with clean, scalable architecture — covering everything from UI to backend and database logic.',
+            id: 6,
+            title: 'Full Stack Development',
+            description:
+                "From frontend to backend, I build complete, scalable web apps using a modern stack — clean architecture, secure APIs, and reliable databases included.",
         },
-      ];
-      
+    ];
+
+
+
 
 
     return (
@@ -68,7 +70,7 @@ export const Services = ({ id }: { id: string }) => {
             id={id}
             ref={sectionRef}
             // className="min-h-screen bg-black flex flex-col lg:flex-row items-start px-7 sm:px-14 pt-20"
-             className="min-h-[85vh] bg-black flex flex-col lg:flex-row items-start px-7 sm:px-14 pt-20"
+            className="min-h-[85vh] bg-black flex flex-col lg:flex-row items-start px-7 sm:px-14 pt-20"
             // className=" bg-black flex flex-col lg:flex-row items-start px-7 sm:px-14 pb-36 pt-20"
             variants={sectionVariants}
             initial="hidden"
@@ -79,7 +81,7 @@ export const Services = ({ id }: { id: string }) => {
                 Services.
             </div>
             <div className="flex flex-col">
-                
+
                 {/* <motion.div
                     className="flex flex-col lg:flex-row"
                     variants={itemVariants}
@@ -135,30 +137,30 @@ export const Services = ({ id }: { id: string }) => {
 
 
 
-<div className='grid grid-cols-1 lg:ml-40 lg:grid-cols-2'>
-      <AnimatedBackground
-        className='rounded-lg bg-[#0f0f0f]'
-        transition={{
-          type: 'spring',
-          bounce: 0.2,
-          duration: 0.6,
-        }}
-        enableHover
-      >
-        {Services.map((item, index) => (
-          <div key={index} data-id={`card-${index}`}>
-            <div className='flex select-none flex-col space-y-2 p-5'>
-                <div className="text-2xl md:text-[27px] font-semibold">
-                    {item.title}
+                <div className='grid grid-cols-1 lg:ml-40 lg:grid-cols-2'>
+                    <AnimatedBackground
+                        className='rounded-lg bg-[#0f0f0f]'
+                        transition={{
+                            type: 'spring',
+                            bounce: 0.2,
+                            duration: 0.6,
+                        }}
+                        enableHover
+                    >
+                        {Services.map((item, index) => (
+                            <div key={index} data-id={`card-${index}`}>
+                                <div className='flex select-none flex-col space-y-2 p-5'>
+                                    <div className="text-2xl md:text-[27px] font-semibold">
+                                        {item.title}
+                                    </div>
+                                    <div className="text-lg md:text-lg font-medium text-stone-600 pt-2 leading-normal lg:leading-relaxed">
+                                        {item.description}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </AnimatedBackground>
                 </div>
-                <div className="text-lg md:text-lg font-medium text-stone-600 pt-2 leading-normal lg:leading-relaxed">
-                    {item.description}
-                </div>
-            </div>
-          </div>
-        ))}
-      </AnimatedBackground>
-    </div>
             </div>
         </motion.div>
     );
