@@ -130,7 +130,7 @@ export const Projects = ({ id }: { id: string }) => {
                     index={3}
                     name="Pilser"
                     description="A platform for running security and quality assessments. Users can use or customize templates, generate reports, assign tasks, and track everything in one place."
-                    logo="/Pilser-logo.png"
+                    logo="/Pilser-logo-copy.png"
                     image="/Pilser.png"
                     projectLink="https://pilser.com/"
                     pictureOnLeft={true}
