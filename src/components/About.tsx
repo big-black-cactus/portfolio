@@ -59,13 +59,13 @@ function TextRevealByWord({ text, isInView }: { text: string, isInView: boolean 
   return (
     <motion.div
       // className="flex flex-wrap text-2xl font-bold text-white/20 px-7 sm:px-14 md:text-3xl lg:text-4xl lg:!pt-20 !leading-[1.3]"
-      className="flex flex-wrap text-2xl font-bold text-white/40 px-7 sm:px-14 md:text-3xl lg:text-4xl lg:!pt-28 !leading-[1.3]"
+      className="flex flex-wrap text-[clamp(1.5rem,2.75vw,3rem)] font-bold text-white/40  lg:!pt-28 !leading-[1.3]"
       variants={container}
       initial="hidden"
       animate={isInView ? 'visible' : 'hidden'}
     >
       {words.map((w, i) => (
-        <motion.span key={i} variants={word} className="mr-3">
+        <motion.span key={i} variants={word} className="inline-block whitespace-nowrap mr-3">
           {w}
         </motion.span>
       ))}
@@ -81,7 +81,7 @@ export const About = ({ id }: { id: string }) => {
     <div
       ref={ref}
       // className="z-10 flex min-h-screen items-center justify-center bg-black px-4"
-      className="z-10 flex min-h-[80vh] items-center justify-center bg-black px-4"
+      className="z-10 flex min-h-[80vh] items-center justify-center bg-black px-5 md:px-14 mx-auto"
     >
       <motion.div
         initial="hidden"

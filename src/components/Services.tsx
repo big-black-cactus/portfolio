@@ -70,7 +70,7 @@ export const Services = ({ id }: { id: string }) => {
             id={id}
             ref={sectionRef}
             // className="min-h-screen bg-black flex flex-col lg:flex-row items-start px-7 sm:px-14 pt-20"
-            className="min-h-[85vh] bg-black flex flex-col lg:flex-row items-start px-7 sm:px-14 pt-20"
+            className="min-h-[85vh] flex flex-col lg:flex-row items-start px-7 sm:px-14 pt-20 pb-20 md:pb-0"
             // className=" bg-black flex flex-col lg:flex-row items-start px-7 sm:px-14 pb-36 pt-20"
             variants={sectionVariants}
             initial="hidden"
@@ -137,7 +137,7 @@ export const Services = ({ id }: { id: string }) => {
 
 
 
-                <div className='grid grid-cols-1 lg:ml-40 lg:grid-cols-2'>
+                <div className='grid grid-cols-1 lg:ml-40 lg:grid-cols-2 gap-2 md:gap-0'>
                     <AnimatedBackground
                         className='rounded-lg bg-[#0f0f0f]'
                         transition={{
@@ -148,12 +148,12 @@ export const Services = ({ id }: { id: string }) => {
                         enableHover
                     >
                         {Services.map((item, index) => (
-                            <div key={index} data-id={`card-${index}`}>
+                            <div key={index} data-id={`card-${index}`} className="rounded-lg bg-[#080808] md:bg-transparent">
                                 <div className='flex select-none flex-col space-y-2 p-5'>
-                                    <div className="text-2xl md:text-[27px] font-semibold">
+                                    <div className="text-[22px] md:text-[27px] font-semibold">
                                         {item.title}
                                     </div>
-                                    <div className="text-lg md:text-lg font-medium text-stone-600 pt-2 leading-normal lg:leading-relaxed">
+                                    <div className="text-[17px] md:text-lg font-medium text-stone-600 pt-2 leading-normal lg:leading-relaxed">
                                         {item.description}
                                     </div>
                                 </div>

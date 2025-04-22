@@ -46,12 +46,12 @@ export const Hero = ({ id }: { id: string }) => {
     <motion.div
       id={id}
       ref={sectionRef}
-      className="h-[100vh] w-full relative z-10 flex flex-col items-center justify-center bg-black"
+      className="h-[100vh] w-full relative z-10 flex flex-col items-center justify-center bg-black px-[clamp(1rem,5vw,3.5rem)]"
       initial={{ opacity: 1 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0 }}
     >
-      <div className="h-screen w-screen z-30 flex flex-col items-start justify-center text-white mx-auto px-6 sm:px-14 text-center pb-4 select-none">
+      <div className="h-screen w-screen z-30 flex flex-col items-start justify-center text-white text-center pb-4 select-none mx-auto">
         <BlurIn
           word="Turning product ideas into clean, intuitive web apps — designed with care, built to perform."
         />

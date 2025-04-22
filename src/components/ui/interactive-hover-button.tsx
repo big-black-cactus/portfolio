@@ -75,13 +75,13 @@ interface InteractiveHoverButtonProps
 const InteractiveHoverButton = React.forwardRef<
   HTMLButtonElement,
   InteractiveHoverButtonProps
->(({ text = "Build your MVP", className, ...props }, ref) => {
+>(({ text = "Make It Real", className, ...props }, ref) => {
   return (
     <a href="https://cal.com/artyom-antonenko/30min">
       <button
         ref={ref}
         className={cn(
-          "group relative w-44 md:w-56 h-16 md:h-20 cursor-pointer overflow-hidden rounded-full border p-2 text-center border-stone-800 bg-transparent text-lg md:text-xl font-bold transition-colors duration-300 ease-in hover:border-stone-500 hover:bg-stone-900/60",
+          "group relative w-44 md:w-48 h-16 md:h-20 cursor-pointer overflow-hidden rounded-full border p-2 text-center border-stone-800 bg-transparent text-lg md:text-xl font-bold transition-colors duration-300 ease-in hover:border-stone-500 hover:bg-stone-900/60",
           className,
         )}
         {...props}
@@ -93,7 +93,7 @@ const InteractiveHoverButton = React.forwardRef<
           <span>{text}</span>
           <ArrowRight />
         </div>
-        <div className="absolute left-[11%] top-[46%] h-2 w-2 scale-[1] rounded-lg bg-white transition-all duration-300 group-hover:left-[0%] group-hover:top-[0%] group-hover:h-full group-hover:w-full group-hover:scale-[1.8] group-hover:bg-white"></div>
+        <div className="absolute left-[11%] top-[44.5%] h-2 w-2 scale-[1] rounded-lg bg-white transition-all duration-300 group-hover:left-[0%] group-hover:top-[0%] group-hover:h-full group-hover:w-full group-hover:scale-[1.8] group-hover:bg-white"></div>
       </button>
     </a>
   );

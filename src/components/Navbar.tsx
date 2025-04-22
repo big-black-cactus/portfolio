@@ -13,7 +13,7 @@ export const Navbar = React.memo(() => {
       animate={{ opacity: 1 }} // Fade to full opacity
       transition={{ duration: 3, ease: "easeInOut" }} // Control animation duration and easing
     >
-      <div className="mx-auto relative flex items-center px-7 sm:px-14">
+      <div className="mx-auto relative flex items-center px-5 md:px-14">
         <Image
           alt="Antonenko"
           src="/avatar.png"

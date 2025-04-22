@@ -61,7 +61,7 @@ export default function CookieConsent({
 
     return (
         variant === "default" ? (
-            <div className={cn("fixed z-[200] bottom-0 right-0 sm:right-10 sm:bottom-4 w-full sm:max-w-md duration-700", !isOpen ? "transition-[opacity,transform] translate-y-8 opacity-0" : "transition-[opacity,transform] translate-y-0 opacity-100", hide && "hidden")}>                
+            <div className={cn("fixed z-[200] bottom-0 right-0 sm:right-10 sm:bottom-4 w-full sm:max-w-[520px] duration-700", !isOpen ? "transition-[opacity,transform] translate-y-8 opacity-0" : "transition-[opacity,transform] translate-y-0 opacity-100", hide && "hidden")}>                
                 <div className="dark:bg-card bg-background rounded-md m-3 border border-stone-800 shadow-xl">
                     <div className="grid gap-2">
                         <div className="border-b border-border border-stone-800 h-14 flex items-center justify-between p-4">
@@ -70,10 +70,10 @@ export default function CookieConsent({
                         </div>
                         <div className="p-4">
                             <p className="text-sm md:text-[15px] font-medium text-start">
-                                This personal portfolio uses cookies to add a sprinkle of magic to your browsing experience and showcase my work at its best. Your privacy is my priority.
+                            This portfolio serves cookies—digital ones—to sprinkle some magic on your experience ✨ and help me shine just right. Don't worry, your privacy is the secret ingredient.
                                 <br />
                                 <br />
-                                <span className="text-xs md:text-[14px]">By clicking &quot;<span className="font-medium opacity-80">Accept</span>&quot;, you&apos;re allowing the magic to happen.</span>
+                                <span className="text-xs md:text-[14px]">Hit &quot;<span className="font-medium opacity-80">Accept</span>&quot; to let the good times (and sweet enhancements) roll.</span>
                                 <br />
                                 <a href="#" className="text-xs md:text-[14px] underline">Learn more.</a>
                             </p>
@@ -94,12 +94,12 @@ export default function CookieConsent({
                     </div>
                     <div className="p-3 -mt-2">
                         <p className="text-sm text-left text-muted-foreground">
-                            This portfolio uses cookies to make your visit smooth and delightful. Ready for the magic? 🍪
+                        This portfolio serves cookies—digital ones—to sprinkle some magic on your experience ✨ and help me shine just right. Don't worry, your privacy is the secret ingredient.
                         </p>
                     </div>
                     <div className="p-3 flex items-center gap-2 mt-2 border-t">
-                        <Button onClick={accept} className="w-full h-9 rounded-full">accept</Button>
-                        <Button onClick={decline} className="w-full h-9 rounded-full" variant="outline">decline</Button>
+                        <Button onClick={accept} className="w-full h-9 rounded-full">Accept</Button>
+                        <Button onClick={decline} className="w-full h-9 rounded-full" variant="outline">Decline</Button>
                     </div>
                 </div>
             </div>

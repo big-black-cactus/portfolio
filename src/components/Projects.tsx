@@ -49,7 +49,7 @@ export const Projects = ({ id }: { id: string }) => {
                 animate={project1InView ? "visible" : "hidden"}
                 transition={{ duration: 1.5, ease: "easeInOut", delay: 0.1 }}
             >
-                <Project
+                {/* <Project
                     index={1}
                     name="Sales AI"
                     description="A tool that helps automate LinkedIn outreach. Users enter a profile URL, and the bot generates personalized message options, making lead generation faster and more effective."
@@ -58,6 +58,17 @@ export const Projects = ({ id }: { id: string }) => {
                     projectLink="https://sales-ai-five.vercel.app"
                     shadowColor="#4E1CDB"
                     iconList={["/postgresql.svg", "/nextjs.svg", "/openai.svg", "/postman.svg", "/js.svg"]}
+                /> */}
+                <Project
+                    index={1}
+                    name="GStudy"
+                    description="Gstudy is an AI-driven study platform designed to help students learn smarter, not harder. With powerful AI tools, Gstudy transforms lecture notes, textbooks, YouTube videos, and PDFs into structured summaries and interactive flashcards."
+                    logo="/GStudy-logo.png"
+                    image="/GStudy.png"
+                    projectLink="https://gstudy.pro"
+                    pictureOnLeft={true}
+                    shadowColor="#1063FF"
+                    iconList={["/supabase.svg", "/nextjs.svg", "/prisma.svg", "/pwa.svg", "/typescript.svg"]}
                 />
             </motion.div>
 
@@ -69,7 +80,7 @@ export const Projects = ({ id }: { id: string }) => {
                 animate={project2InView ? "visible" : "hidden"}
                 transition={{ duration: 1, ease: "easeInOut", delay: 0.1 }}
             >
-                <Project
+                {/* <Project
                     index={2}
                     name="Pilser"
                     description="A platform for running security and quality assessments. Users can use or customize templates, generate reports, assign tasks, and track everything in one place."
@@ -80,6 +91,17 @@ export const Projects = ({ id }: { id: string }) => {
                     shadowColor="#1063FF"
                     iconList={["/supabase.svg", "/nextjs.svg", "/prisma.svg", "/pwa.svg", "/typescript.svg"]}
                     isUnavailable={true}
+                /> */}
+
+<Project
+                    index={2}
+                    name="Sales AI"
+                    description="A tool that helps automate LinkedIn outreach. Users enter a profile URL, and the bot generates personalized message options, making lead generation faster and more effective."
+                    logo="/SalesAI-logo.png"
+                    image="/SalesAI.png"
+                    projectLink="https://sales-ai-five.vercel.app"
+                    shadowColor="#4E1CDB"
+                    iconList={["/postgresql.svg", "/nextjs.svg", "/openai.svg", "/postman.svg", "/js.svg"]}
                 />
             </motion.div>
 
@@ -93,7 +115,7 @@ export const Projects = ({ id }: { id: string }) => {
                 animate={project3InView ? "visible" : "hidden"}
                 transition={{ duration: 1, ease: "easeInOut", delay: 0.1 }} // Staggered delay for cascading effect
             >
-                <Project
+                {/* <Project
                     index={3}
                     name="GStudy"
                     description="Gstudy is an AI-driven study platform designed to help students learn smarter, not harder. With powerful AI tools, Gstudy transforms lecture notes, textbooks, YouTube videos, and PDFs into structured summaries and interactive flashcards."
@@ -103,6 +125,18 @@ export const Projects = ({ id }: { id: string }) => {
                     pictureOnLeft={true}
                     shadowColor="#1063FF"
                     iconList={["/supabase.svg", "/nextjs.svg", "/prisma.svg", "/pwa.svg", "/typescript.svg"]}
+                /> */}
+                <Project
+                    index={3}
+                    name="Pilser"
+                    description="A platform for running security and quality assessments. Users can use or customize templates, generate reports, assign tasks, and track everything in one place."
+                    logo="/Pilser-logo.png"
+                    image="/Pilser.png"
+                    projectLink="https://pilser.com/"
+                    pictureOnLeft={true}
+                    shadowColor="#1063FF"
+                    iconList={["/supabase.svg", "/nextjs.svg", "/prisma.svg", "/pwa.svg", "/typescript.svg"]}
+                    isUnavailable={true}
                 />
 
             </motion.div>

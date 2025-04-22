@@ -136,7 +136,7 @@ const Project: React.FC<ProjectProps> = ({
           </motion.div>
         </div>
         {/* <div className={`w-full lg:w-7/12 flex flex-col ${pictureOnLeft ? 'lg:order-2 md:pl-16' : 'lg:order-1 lg:pr-16'} order-2 mt-4 lg:mt-0`}> */}
-        <div className={`w-full lg:w-6/12 flex flex-col lg:order-2 md:pl-10 mt-4 lg:mt-0`}>
+        <div className={`w-full lg:w-6/12 flex flex-col lg:order-2 md:pl-10 mt-6 md:mt-4 lg:mt-0`}>
           {/* <div className='font-bold text-xl lg:text-2xl mt-4 md:mt-0'>{name}</div> */}
           <div className='w-full flex flex-row items-center justify-between'>
             <div className='flex flex-row w-full items-center'>
@@ -151,15 +151,15 @@ const Project: React.FC<ProjectProps> = ({
                 />
               </div>
 
-              <div className='font-bold text-lg lg:text-[18px] mt-4 md:mt-0'>{name}</div>
+              <div className='font-bold text-md lg:text-[18px] mt-0'>{name}</div>
             </div>
 
-            <div className='font-bold text-lg lg:text-lg mt-4 md:mt-0'>
+            <div className='font-bold text-md lg:text-lg mt-0'>
               {String(index).padStart(2, '0')}
             </div>
           </div>
           {/* <div className='mt-4 md:mt-6 font-medium text-lg lg:text-xl text-stone-600 leading-7 lg:leading-9'> */}
-          <div className='mt-4 md:mt-6 font-medium text-md lg:text-lg text-stone-600 leading-7 lg:leading-[34px]'>
+          <div className='mt-4 md:mt-6 font-medium text-[17px] lg:text-lg text-stone-600 leading-7 lg:leading-[34px]'>
             {description}
           </div>
           {/* <div className='flex flex-row mt-6 space-x-3.5'>

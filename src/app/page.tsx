@@ -26,7 +26,7 @@ export default function Home() {
     <Lenis>
       <SmoothScrollHandler />
       <main 
-        className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden" 
+        className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden w-full" 
       >
         <div className="w-full cursor-none">
           <CustomCursor />
