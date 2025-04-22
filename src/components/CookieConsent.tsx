@@ -70,7 +70,7 @@ export default function CookieConsent({
                         </div>
                         <div className="p-4">
                             <p className="text-sm md:text-[15px] font-medium text-start">
-                            This portfolio serves cookies—digital ones—to sprinkle some magic on your experience ✨ and help me shine just right. Don't worry, your privacy is the secret ingredient.
+                            This portfolio serves cookies—digital ones—to sprinkle some magic on your experience ✨ and help me shine just right. Don&apos;t worry, your privacy is the secret ingredient.
                                 <br />
                                 <br />
                                 <span className="text-xs md:text-[14px]">Hit &quot;<span className="font-medium opacity-80">Accept</span>&quot; to let the good times (and sweet enhancements) roll.</span>
@@ -94,7 +94,7 @@ export default function CookieConsent({
                     </div>
                     <div className="p-3 -mt-2">
                         <p className="text-sm text-left text-muted-foreground">
-                        This portfolio serves cookies—digital ones—to sprinkle some magic on your experience ✨ and help me shine just right. Don't worry, your privacy is the secret ingredient.
+                        This portfolio serves cookies—digital ones—to sprinkle some magic on your experience ✨ and help me shine just right. Don&apos;t worry, your privacy is the secret ingredient.
                         </p>
                     </div>
                     <div className="p-3 flex items-center gap-2 mt-2 border-t">
