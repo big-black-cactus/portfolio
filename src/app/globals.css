@@ -3,6 +3,24 @@
 @tailwind utilities;
 
 @layer base {
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #000 !important; /* Force black bg always */
+    color: white;
+  }
+
+  body {
+    background-color: #000 !important; /* Ensure body is black too */
+    color: white;
+    overscroll-behavior: none; /* Prevent iOS bounce showing white */
+  }
+
+  
   :root {
     --background: 0 0% 0%; /* Black */
     --foreground: 0 0% 100%; /* White */
