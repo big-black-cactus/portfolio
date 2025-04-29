@@ -103,7 +103,9 @@ export const About = ({ id }: { id: string }) => {
           #about-me
         </motion.div> */}
         <TextRevealByWord
-          text="Hey there, I&apos;m Artyom — a Full Stack Web Developer & UX/UI Designer crafting standout digital experiences from the heart of Germany. With Next.js as my playground, I build sleek, high-performing web apps that don't just look good — they feel right. I turn ideas into beautiful, functional products, blending code and design with a user-first mindset. From fast-moving startups to complex team projects, I bring passion, precision, and a touch of magic to every pixel and line of code."
+          text="Hi, I&apos;m Artyom — a web developer and designer from Germany who loves building things that matter. I&apos;m not just here to write code or make things look nice — I care deeply about the ideas behind every project, including my own. Whether it's a personal passion project or something for a client, I put real thought and heart into making products that feel good to use and make a real difference. Good design, smooth experience, clean execution — that&apos;s what I aim for every time.
+
+"
           isInView={isInView}
         />
 
