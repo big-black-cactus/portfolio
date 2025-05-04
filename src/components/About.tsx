@@ -103,7 +103,7 @@ export const About = ({ id }: { id: string }) => {
           #about-me
         </motion.div> */}
         <TextRevealByWord
-          text="Hi, I&apos;m Artyom — a web developer and designer from Germany who loves building things that matter. I&apos;m not just here to write code or make things look nice — I care deeply about the ideas behind every project, including my own. Whether it's a personal passion project or something for a client, I put real thought and heart into making products that feel good to use and make a real difference. Good design, smooth experience, clean execution — that&apos;s what I aim for every time.
+          text="Hi, I&apos;m Artyom — a web developer and designer based in Germany who loves building things that matter. I&apos;m not just here to write code or make things look nice — I care deeply about the ideas behind every project, including my own. Whether it's a personal passion project or something for a client, I put real thought and heart into making products that feel good to use and make a real difference. Good design, smooth experience, clean execution — that&apos;s what I aim for every time.
 
 "
           isInView={isInView}
